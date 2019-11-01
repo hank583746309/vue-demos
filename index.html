@@ -65,7 +65,7 @@
 
         <div class="footer">
         	<div class="links"></div> 
-        	<div class="copyright"> Copyright<i class="anticon anticon-copyright">&copy;</i>2018-2019 小韩工作室出品</div>
+        	<div class="copyright"> Copyright<i class="anticon anticon-copyright">&copy;</i>2018-<span id="nowYear"></span> 小韩工作室出品</div>
   		</div>
         <script src="layui/layui.all.js"></script>
         <script>layui.use('carousel',
@@ -91,8 +91,12 @@
           });</script>
         <style type="text/css">body{cursor:url(http://mitu8.cn/571614181-1.cur),default;} a:hover,li:hover,img:hover{cursor:url(http://mitu8.cn/571614181-2.cur),pointer;}</style>
         <script language="javascript">　　
-          function Click() {　　　　window.event.returnValue = false;　　
-          }　　document.oncontextmenu = Click;　　</script>
+          function Click() {　　　　
+            window.event.returnValue = false;　　
+          }　　
+          document.oncontextmenu = Click;　　
+          document.getElementById('nowYear').innerHTML = (new Date()).getFullYear()
+          </script>
         <div style="display: none"></div>
   </body>
 
