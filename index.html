@@ -15,35 +15,51 @@
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js"></script>
     <style type="text/css">
     .layui-nav { background-color: #fff; float: right; } .layui-nav .layui-nav-item a { color: black; } .floor a{ color:#707070; }
-	.footer{
-		padding: 0 16px;
+  	.footer{
+  		padding: 0 16px;
     	margin: 48px 0 24px;
     	text-align: center;
-		width: 100%;
-		position: fixed;
-		bottom: 0;
-	}
-	.footer .copyright {
+  	}
+  	.footer .copyright {
 	    color: rgba(0,0,0,.45);
 	    font-size: 14px;
-	}
-    </style></head>
+  	}
+    .menu {
+      float: right;
+      padding: 7px 0;
+      line-height: 50px;
+    }
+    .menu > .menuitem {
+      float: left;
+      margin-left: 20px;
+      font-size: 16px;
+    }
+    </style>
+    <style type="text/css">
+        .product-item { float: left; position: relative; /* padding-left: 60px; */ width: 200px; margin-right: 35px; margin-bottom: 10px; margin-top: 10px; margin-left: 10px; padding: 10px 10px 10px 60px; } .item-mouseenter { background: #eeeeee; } .product-item dt { position: absolute; width: 40px; height: 40px; left: 0; top: 0; } .product-item dt img { margin-left: 10px; width: 40px; height: 40px; padding-top: 10px; } .product-item dd { font-size: 12px; color: #999999; } .product-item .pro-name a { font-size: 15px; color: #555555; line-height: 24px; } .mod .c { padding-bottom: 0; } .yk-content { padding-top: 20px; }
+      </style>
+  </head>
   
   <body>
     <div class="window">
       <div style="background:white;position:fixed;left:0px;top:0px;width:100%;z-index:9999; box-shadow: 0 0 10px rgba(0,0,0,.15);">
         <div style="height:60px;width:1300px;margin:auto;">
           <div style="float:left;padding:7px 0 7px 0">
-            <img src="images/logo.png" alt="" style="height:50px;"></div>
+            <img src="images/logo.png" alt="" style="height:50px;">
+          </div>
+          <ul id="nav" class="menu">
+            <li class="menuitem">
+              <a href="#home">技术相关</a>
+            </li>
+            <li class="menuitem">
+              <a href="#hangye">行业相关</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <!--sub nav-->
-      <!--sub nav end-->
-      <div class="s-body" style="margin-top:60px;">
-        <div class="yk-content">
-          <div name="m_pos" id="m_230239">
-            <style type="text/css">
-              .product-item { float: left; position: relative; /* padding-left: 60px; */ width: 200px; margin-right: 35px; margin-bottom: 10px; margin-top: 10px; margin-left: 10px; padding: 10px 10px 10px 60px; } .item-mouseenter { background: #eeeeee; } .product-item dt { position: absolute; width: 40px; height: 40px; left: 0; top: 0; } .product-item dt img { margin-left: 10px; width: 40px; height: 40px; padding-top: 10px; } .product-item dd { font-size: 12px; color: #999999; } .product-item .pro-name a { font-size: 15px; color: #555555; line-height: 24px; } .mod .c { padding-bottom: 0; } .yk-content { padding-top: 20px; }</style></div>
+      <div class="s-body">
+        
+        <div class="yk-content" id="home" style="padding-top:60px;">
           <div class="mod mod-new layui-anim layui-anim-up">
             <div class="h">
               <h2><span style="color:#E53333;">数据平台类</span></h2>
@@ -69,6 +85,17 @@
                   </dd>
                   <dd>包含table报表展示</dd>
                 </dl>
+
+                <dl class="product-item">
+                  <dt>
+                    <a target="_blank" href="https://ververica.cn/">
+                      <img src="https://ververica.cn/wp-content/uploads/2019/04/cropped-ververica-favicon-192x192.png"></a>
+                  </dt>
+                  <dd class="pro-name">
+                    <a target="_blank" href="https://ververica.cn/">ververica</a></dd>
+                  <dd>包括Flink相关</dd>
+                </dl>
+
               </div>
             </div>
           </div>
@@ -168,10 +195,85 @@
 
               </div>
             </div>
+          </div>
+        </div>
 
+
+        <div class="yk-content" id="hangye">
+          <div class="mod mod-new layui-anim layui-anim-up">
+            <div class="h">
+              <h2><span style="color:#E53333;">产品、设计及其工具</span></h2>
+              <h1>产品、设计和产品思维相关资源</h1>
+            </div>
+            <div class="c">
+              <div class="yk-row">
+                <dl class="product-item">
+                  <dt>
+                    <a target="_blank" href="http://library.ant.design/">
+                      <img src="https://gw.alipayobjects.com/zos/rmsportal/tyfOUgTuyqnIgFlJaeym.svg" style="width:initial;">
+                    </a>
+                  </dt>
+                  <dd class="pro-name">
+                    <a target="_blank" href="http://library.ant.design/" style="visibility: hidden;">Ant Design Library</a></dd>
+                  <dd>一套精美得像视觉稿的 Axure 组件库</dd>
+                </dl>
+                <dl class="product-item">
+                  <dt>
+                    <a target="_blank" href="https://ant.design/index-cn">
+                    <img src="https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png"></a>
+                  </dt>
+                  <dd class="pro-name">
+                    <a target="_blank" href="https://ant.design/index-cn">Ant Design</a>
+                  </dd>
+                  <dd>企业级产品设计体系</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+
+          <div class="mod mod-new layui-anim layui-anim-up">
+            <div class="h">
+              <h2><span style="color:#E53333;">技术BLOG</span></h2>
+              <h1>名企技术博客</h1>
+            </div>
+            <div class="c">
+              <div class="yk-row">
+                <dl class="product-item">
+                  <dt>
+                    <a target="_blank" href="https://tech.youzan.com/">
+                      <img src="https://tech.youzan.com/content/images/2017/10/logo.png"></a>
+                  </dt>
+                  <dd class="pro-name">
+                    <a target="_blank" href="https://tech.youzan.com/">有赞技术博客</a></dd>
+                  <dd>有赞技术团队出品</dd>
+                </dl>
+
+                <dl class="product-item">
+                  <dt>
+                    <a target="_blank" href="https://tech.meituan.com/">
+                      <img src="https://awps-assets.meituan.net/mit/blog/v20190629/asset/icon/android-icon-192x192.png?v=Whistle&t=20181017-1r"></a>
+                  </dt>
+                  <dd class="pro-name">
+                    <a target="_blank" href="https://tech.meituan.com/">美团技术博客</a></dd>
+                  <dd>美团技术团队出品</dd>
+                </dl>
+
+                <dl class="product-item">
+                  <dt>
+                    <a target="_blank" href="https://102.alibaba.com/tech/list/">
+                      <img src="https://102.alibaba.com/alitech/img/head.png"></a>
+                  </dt>
+                  <dd class="pro-name">
+                    <a target="_blank" href="https://102.alibaba.com/tech/list/">阿里巴巴技术博客</a></dd>
+                  <dd>阿里巴巴技术团队出品</dd>
+                </dl>
+
+              </div>
+            </div>
           </div>
 
         </div>
+
       </div>
 
         <div class="footer">
